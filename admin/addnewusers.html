@@ -1,0 +1,64 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Admin panel</title>
+	<link rel="stylesheet" type="text/css" href="../style/admin.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalabe=0">
+</head>
+<body>
+	<div id="header">
+		<div class="logo">
+			<a href="#">Bucky <span>Store</span></a>
+		</div>
+		<div class="logout">
+		<a href="#"><i class="fas fa-unlock"></i> Admin</a>
+		<a href="#">Log Out</a>
+	</div>
+		
+	</div>
+	<a class="mobile" href="#" id="mobile">MENU
+		
+	</a>
+	<div id="container">
+		<div class="sidebar" id="sidebar">
+			<ul id="nav">
+				<li><a href="index.html" >Manage Product</a></li>
+				<li><a href="viewallproducts.html">View all Sales records</a></li>
+				<li><a href="addnewproduct.html">Add New Products</a></li>
+				<li><a href="updatenewproduct.html">Update Product</a></li>
+				<li><a href="searchproduct.html">Search For Products</a></li>
+				<li><a href="addnewusers.html" class="selected">Add New Users</a></li>
+				<li><a href="listusers.html" >List of Users</a></li>
+
+			</ul>
+		</div>
+		<div class="content">
+			<div id="box">
+				<h2 class="box-top">ADD NEW USER</h2>
+				<div class="box-panel">
+            <form name="adduser" action="" method="post" accept-charset="utf-8">
+              <ul>
+                <li><label>Username</label></li>
+                <li><input type="text" id="fname" name="FirstName" placeholder="User Name" required></li>
+                <li><label>Full Name</label></li>
+                <li><input type="text" id="lname" name="LastName" placeholder="Full Name" required></li>
+                <li><label>Password</label></li>
+                <li><input type="password" id="lname" name="LastName" placeholder="Password" required></li>
+                <li><label>Phone Number</label></li>
+                <li><input type="text" id="phone" name="PhoneNumber" placeholder="Number" required></li>
+                <li><label>Email</label></li>
+                <li><input type="text" id="email" name="usermail" placeholder="yourname@email.com" required></li>
+                <li><button id="submit" type="Button">Add User</button></li>
+              </ul>
+          </form>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+<script type="text/javascript" src="../js/general.js"></script>
+</body>
+</html>
