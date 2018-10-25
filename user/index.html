@@ -14,22 +14,23 @@
 		</div>
 		<div class="logout">
 		<a href="#"><i class="fas fa-unlock"></i> Hello, James </a>
-		<a href="#">Log Out</a>
+		
 	</div>
 	</div>
 	<a class="mobile" href="#" id="mobile">MENU
 		
 	</a>
 	<div id="container">
-		<div class="sidebar" id="sidebar">
-			<ul id="nav">
-				<li><a href="index.html" class="selected">Manage Products</a></li>
-				<li><a href="#" id="showCustomer">Order for Customers</a></li>
-				<li><a href="orderproduct.html">Order List</a></li>
+		<div class="sidebar " id="sidebar">
+			<ul id="nav" >
+				<li class="animated fadeInLeft"><a href="index.html" class="selected">Manage Products</a></li>
+				<li class="animated fadeInRight"><a href="#" id="showCustomer">Order for Customers</a></li>
+				<li class="animated fadeInLeft"><a href="orderproduct.html">Order List</a></li>
+				<li class="animated fadeInRight"><a href="../index.html">Log Out</a></li>
 			</ul>
 		</div>
 		<div class="content">
-			<div class="header-right">
+			<div class="header-right animated fadeInRight">
 						<div class="cart box_1">
 							<a href="checkout.html">
 								<h3> $<span id="total-cart"> 0.00 </span> (<span id="count-cart"> 0 </span> items)<img src="../images/bag.png" alt=""></h3>
@@ -40,9 +41,9 @@
 			<div id="box" class="view-product">
 				<h2 class="box-top">VIEW ALL AVAILABLE PRODUCTS</h2>
 				<div class="box-panel">
-                    <table class="table" cellpadding="0" cellspacing="0">
+				            <table>
 				   
-				 <tr>    
+				 <tr class="animated fadeInLeft">    
 						<th>PRODUCT_ID</th>
 						<th>NAME</th>
 						<th>DESCRIPTION</th>
@@ -50,17 +51,17 @@
 						<th>IMAGE</th>
 						<th>PRICE</th>
 				 </tr>
-				 <tr class="add-to-cart" data-prdId="1" data-name="Hp" data-price="200">    
+				 <tr class="add-to-cart animated fadeInRight" data-prdId="1" data-name="Hp" data-price="200" >    
 						<td>1</td>
 						<td>Hp</td>
-						<td>HP Pavilion X360 15-bk163dx Touch-Screen Laptop - 15.6" - Core I3 7100U - 8 GB RAM - 1 TB HDD Windows 10.</td>
+						<td>HP Pavilion X360 15-bk163dx Touch-Screen Laptop - 15.6"</td>
 						<td>72</td>
 						<td><img src="../images/c05962448.png"></td>
 						<td>$200</td>
 						<td><button type="button" id="addproducts">Add</button></td>
 						
 				 </tr>
-				 <tr class="add-to-cart" data-prdId="2" data-name="Hp" data-price="300">    
+				 <tr class="add-to-cart animated fadeInLeft" data-prdId="2" data-name="Hp" data-price="300" >    
 						<td>2</td>
 						<td>Hp</td>
 						<td>HP ProBook 440 G5 NoteBook PC</td>
@@ -69,7 +70,7 @@
 						<td>$300</td>
 						<td><button type="button" id="addproducts">Add</button></td>
 				 </tr>
-				 <tr class="add-to-cart" data-prdId="3" data-name="Legion" data-price="400">    
+				 <tr class="add-to-cart animated fadeInRight" data-prdId="3" data-name="Legion" data-price="400">    
 						<td>3</td>
 						<td>Legion</td>
 						<td>Legion Y520 | intel Core i7 Gaming System</td>
@@ -78,13 +79,23 @@
 						<td>$400</td>
 						<td><button type="button" id="addproducts">Add</button></td>
 				 </tr>
-				  <tr class="add-to-cart" data-prdId="4" data-name="Dell" data-price="400">    
+				  <tr class="add-to-cart animated fadeInLeft" data-prdId="4" data-name="Dell" data-price="400">    
 						<td>4</td>
 						<td>Dell</td>
-						<td>Dell XPS 13 (2018) Review Digital tree,Core i5-8250U processor, 4GB of RAM, and a 128GB solid state drive (SSD).</td>
+						<td>Dell XPS 13 (2018) Review Digital tree,Core i5-8250U processor, 4GB of RAM</td>
 						<td>8</td>
 						<td><img src="../images/dell.jpg"></td>
 						<td>$400</td>
+						<td><button type="button" id="addproducts">Add</button></td>
+					
+				 </tr>
+				 <tr class="add-to-cart animated fadeInRight" data-prdId="5" data-name="LG" data-price="200">    
+						<td>5</td>
+						<td>LG</td>
+						<td>LG X 13 (2018) Core i5-8250U processor, 4GB of RAM</td>
+						<td>7</td>
+						<td><img src="../images/legion.jpg"></td>
+						<td>$200</td>
 						<td><button type="button" id="addproducts">Add</button></td>
 					
 				 </tr>
@@ -111,13 +122,15 @@
 				 
 			</table>
 
-                <li><button id="submit" type="Button">Checkout</button></li>
-              </ul>
+                <button id="submit" type="Button" class="checkout">Checkout</button>
+              
           </form>
 				</div>
-				<ul id="showItems">
-                <li></li>
-            </ul>
+				<table id="show-cart">
+					
+				</table>
+				
+             
 			</div>
 		
 			
