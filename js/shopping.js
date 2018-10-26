@@ -1,49 +1,54 @@
 function handler(event) {
                 event.preventDefault();
                 var name= this.getAttribute("data-name");
-                var productid=this.getAttribute("data-prdId");
+                var productid= this.getAttribute("data-prdId");
                 var price= this.getAttribute("data-price");
 
-                shoppingCart.addItemToCart( name, productid, price, 1);
+                shoppingCart.addItemToCart(name, productid, price, 1);
                 displayCart();
             }
 
         var add = document.getElementsByClassName('add-to-cart');
         for (var i = 0; i < add.length; i++) {
-            add[i].addEventListener('click', handler, false);
+            add[i].addEventListener('click', handler, false)
         }
 
+           /* $(".add-to-cart").click(function(event){
+                event.preventDefault();
+                var name = $(this).attr("data-name");
+                var price = Number($(this).attr("data-price"));
+
+                shoppingCart.addItemToCart(name, price, 1);
+                displayCart();
+            });*/
             document.getElementById('clear-cart').addEventListener('click', function(event){
                 shoppingCart.clearCart();
                 displayCart();
             });
-            
-            var showCart = document.getElementById("showItems");
+            /*$("#clear-cart").click(function(event){
+                shoppingCart.clearCart();
+                displayCart();
+            });*/
+            var showCart = document.getElementById("show-cart");
             var countCart = document.getElementById("count-cart");
             var totalCart = document.getElementById("total-cart");
 
             function displayCart() {
                 var cartArray = shoppingCart.listCart();
                 console.log(cartArray);
-                var output = "";
+                var output = "<tr><th>Product_Id</th><th>Name</th><th>Quantity</th><th>Price</th><th>Total Amount</th></tr>";
 
                 for (var i in cartArray) {
-                    output += "<li>"
-                        +cartArray[i].name
-                        +" <input class='item-count' type='number' data-name='"
-                        +cartArray[i].name
-                        +"' value='"+cartArray[i].count+"' >"
-                        +" x "+cartArray[i].price
-                        +" = "+cartArray[i].total +" = "+ cartArray[i].productid
-                        +" <button class='plus-item' data-name='"
-                        +cartArray[i].name+"'>+</button>"
-                        +" <button class='subtract-item' data-name='"
-                        +cartArray[i].name+"'>-</button>"
-                        +" <button class='delete-item' data-name='"
-                        +cartArray[i].name+"'>X</button>"
-                        +"</li>";
+                    output += "<tr>"
+                        +"<td>" +cartArray[i].productid + "</td>"
+                        +"<td>" +cartArray[i].name +"</td>"
+                        +"<td>" +cartArray[i].count +"</td>"
+                        +"<td>" +cartArray[i].price +"</td>"
+                        +"<td>" +cartArray[i].total +"</td>"
+                        +"</tr>";
                 }
-                
+                   output+='<tr><td></td><td></td><td></td><td></td>'
+                   +'<td>'+shoppingCart.totalCart()+'</td><tr/>';
                 
                 showCart.innerHTML= output;
 
@@ -56,8 +61,8 @@ function handler(event) {
                
             }
                 
-                  showCart.addEventListener('click', function(event){
-                if (event.target.className == 'delete-item'){
+                  showCart.addEventListener('click', function(event) {
+                if (event.target.className == 'delete-item') {
                   callback();
                 }
                     });
